@@ -1,4 +1,4 @@
-// Je veux un tableau
+// Déclarer un tableau
 
 let jeuTableau;
 let allCards = document.querySelectorAll(".card");
@@ -44,7 +44,6 @@ function playGame(card) {
                     }
                     })
 
-            } else {
             }
 
         cptClickCurrent = 0;

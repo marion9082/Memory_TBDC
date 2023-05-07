@@ -1,28 +1,40 @@
 #GameBoard {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+    margin: auto;
 }
 
 .card {
     margin: 10px;
+    transition: 0.5s;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .card:hover {
     cursor: pointer;
 }
 
-.card.hidden p {
+.card img {
+    margin: 0;
+}
+
+.card.hidden img {
     visibility: hidden;
 }
 
-.card.show p {
-    visibility: visible;
-}
-
 .card.hidden {
-    background-color: red
+    transform: rotateY(180deg);
+    background-image : url(img/Couv.jpg);
+    background-position : center;
+    background-size : contain;
 }
 
-.card.finded {
-    color: green;
+.card.finded{
+    border: solid 5px green;
+    opacity: 0.5;
 }
